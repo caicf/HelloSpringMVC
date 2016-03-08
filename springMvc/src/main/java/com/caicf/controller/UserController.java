@@ -27,6 +27,7 @@ public class UserController {
 		return "home";
 	}
 	
+
 	@RequestMapping(value="/show")
 	public String showCookie() {
 		return "home";
