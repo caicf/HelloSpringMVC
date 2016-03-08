@@ -7,9 +7,17 @@ import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.caicf.service.UserService;
+
 @Controller
 @RequestMapping("/")
 public class UserController {
+
+	private UserService userService;
+
+	public void setUserService(UserService userService) {
+		this.userService = userService;
+	}
 
 	private static Logger logger=LoggerFactory.getLogger(UserController.class);
 	
