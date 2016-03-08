@@ -1,17 +1,13 @@
 package com.caicf.dao;
 
+import java.util.List;
+
 import com.caicf.model.User;
 
-public class UserDao {
+public interface UserDao {
 	
-	private User user;
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
+	public User login(User user);
+	
+	public List<User> selectUser(User user);
 	
 }

@@ -3,10 +3,10 @@ package com.caicf.controller;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.caicf.model.User;
 import com.caicf.service.UserService;
 
 @Controller
@@ -35,9 +35,9 @@ public class UserController {
 		return "home";
 	}
 	
-
 	@RequestMapping(value="/show")
-	public String showCookie() {
+	public String showCookie(User user) {
+		userService.doLogin(user);
 		return "home";
 	}
 }
